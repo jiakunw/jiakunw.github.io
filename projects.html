@@ -1,0 +1,308 @@
+<!doctype html>
+<html class="no-js" lang="en">
+
+    <head>
+        <!-- meta data -->
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+
+        <!--font-family-->
+		<link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900&amp;subset=devanagari,latin-ext" rel="stylesheet">
+        
+        <!-- title of site -->
+        <title>Jiakun</title>
+
+        <!-- For favicon png -->
+		<link rel="shortcut icon" type="image/icon" href="assets/logo/favicon.png"/>
+       
+        <!--font-awesome.min.css-->
+        <link rel="stylesheet" href="assets/css/font-awesome.min.css">
+
+		<!--flat icon css-->
+		<link rel="stylesheet" href="assets/css/flaticon.css">
+
+		<!--animate.css-->
+        <link rel="stylesheet" href="assets/css/animate.css">
+
+        <!--owl.carousel.css-->
+        <link rel="stylesheet" href="assets/css/owl.carousel.min.css">
+		<link rel="stylesheet" href="assets/css/owl.theme.default.min.css">
+		
+        <!--bootstrap.min.css-->
+        <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+		
+		<!-- bootsnav -->
+		<link rel="stylesheet" href="assets/css/bootsnav.css" >	
+        
+        <!--style.css-->
+        <link rel="stylesheet" href="assets/css/style.css">
+        
+        <!--responsive.css-->
+        <link rel="stylesheet" href="assets/css/responsive.css">
+
+		<!--icons-->>
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+        
+        <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+        <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+		
+        <!--[if lt IE 9]>
+			<script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+			<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+        <![endif]-->
+
+    </head>
+	
+	<body>
+		<!--[if lte IE 9]>
+            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
+        <![endif]-->
+		
+		<!-- top-area Start -->
+		<header class="top-area">
+			<div class="header-area">
+				<!-- Start Navigation -->
+			    <nav class="navbar navbar-default bootsnav navbar-fixed dark no-background">
+
+			        <div class="container">
+
+			            <!-- Start Header Navigation -->
+			            <div class="navbar-header">
+			                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-menu">
+			                    <i class="fa fa-bars"></i>
+			                </button>
+			                <a class="navbar-brand" href="index.html">Jiakun Wang</a>
+			            </div><!--/.navbar-header-->
+			            <!-- End Header Navigation -->
+
+			            <!-- Collect the nav links, forms, and other content for toggling -->
+			            <div class="collapse navbar-collapse menu-ui-design" id="navbar-menu">
+			                <ul class="nav navbar-nav navbar-right" data-in="fadeInDown" data-out="fadeOutUp">
+			                <li class=" smooth-menu active"></li>
+			                    <li class="smooth-menu"><a href="index.html">home</a></li>
+			                    <li class="smooth-menu"><a href="experience.html">experience</a></li>
+			                    <li class="smooth-menu"><a href="projects.html">projects</a></li>
+			                    <li class="smooth-menu"><a href="courses.html">courses taken</a></li>
+			                    <li class="smooth-menu"><a href="personal.html">my personal</a></li>
+			                </ul><!--/.nav -->
+			            </div><!-- /.navbar-collapse -->
+			        </div><!--/.container-->
+			    </nav><!--/nav-->
+			    <!-- End Navigation -->
+			</div><!--/.header-area-->
+
+		    <div class="clearfix"></div>
+
+		</header><!-- /.top-area-->
+		<!-- top-area End -->
+
+        <section id="projects" class="projects">
+            <div class="section-heading text-center">
+				<h2>My Projects</h2>
+			</div>
+                <div class="projects-content">
+                <div class="single-projects-txt">
+                    <h3>Sigma Stock Markect Analyzor</h3>
+                    <img src="assets/images/projects/sigma-stock-analysis.jpg" alt="Sigma Stock Market Analyzer" class="project-image">
+                    <p>In this project, we made a Real-Time Stock Market Data. 
+                        We used Python as both producer and consumer, Kafka as a message queue 
+                        running on EC2 to process the data, S3 to store the processed data,
+                        Crawler and AWS Glue to create the data catalog, and Athena + SQL to query the data.
+                    </p>
+                </div>
+
+                <div class="single-projects-txt">
+                    <h3>RISC-240 CPU</h3>
+                    <img src="assets/images/projects/RISC-240.jpg" alt="RISC-240 CPU" class="project-image">
+                    <p>Working with a partner, we made a mini-RISC-V CPU using SystemVerilog. 
+                        We support 15 ALU instructions, 8 registers in a register file, and memory 
+                        read/write. To increase the efficiency of integer multiplication,
+                        we made a multiplication co-processor and re-wrote the assembly 
+                        file to manage memory more efficently. After adding the co-processor, we ran 
+                        our CPU on an FPGA with the help of Quartus to examine the result. We decreased 
+                        the average number of clock cycles requried from 500 to 75.
+                    </p>
+                </div>
+
+                <div class="single-projects-txt">
+                    <h3>Digital Board</h3>
+                    <img src="assets/images/projects/digital-board.jpg" alt="Digital Board" class="project-image">
+                    <p>Realizing the need to improve the bulletin boards across campus, 
+                      we create a digiralized version of the bulletin board using Flutter. Students
+                      can login to the main page via Google OAuth. All the posters are organized into 
+                      different categories, and expired posters will be removed by our system. Students
+                      can like the poster, make comments on posters, and post new content. To post a new poster,
+                      student must specify upto 3 categories of the poster, and select an expiration date. All
+                      of the business logic are handled by Firebase (authenticating users, keeping tracks of
+                      all the posters liked by a user/posted by a user, and posting new content/removing 
+                      old content). Additionally, we also have an admin-only page, where the admins can
+                      check the posters, and only appropriate posters will be displayed on the main page.
+                    </p>
+                </div>
+
+                <div class="single-projects-txt">
+                    <h3>Wordle</h3>
+                    <img src="assets/images/projects/wordle.jpg" alt="Wordle" class="project-image">
+                    <p>This is a software-hardware co-design project. We used HTML and CSS to create the 
+                        website of Wordle game, and used JS to handle the game logic. Next, we used
+                        SystemVerilog to add more complicated datapath and FSM: inserting coins to buy the
+                        game, counting the number of games purchased, and computing the game logic 
+                        and the game result. In the end, we synthesized the game on the FPGA, 
+                        and designed the VGA interface to display the result on the screen.
+                    </p>
+                </div>
+
+                <div class="single-projects-txt">
+                    <h3>Social Network</h3>
+                    <img src="assets/images/projects/socialnetwork.jpg" alt="Social Network" class="project-image">
+                    <p>This is a web application made of HTML and CSS. Users are able to post content, 
+                        follow/unfollow other users, edit profile, and making comments.
+                         I used Django REST API to handle 
+                        business logics such as user authentication, profile editing, making posts/comments. 
+                        Additionally, I used MySQL to store user models, post models, and comment models. 
+                        In the end, I deployed it to AWS EC2 with Apache server.
+                    </p>
+                    Website: <a href="http://54.91.209.214/accounts/login/?next=/">http://54.91.209.214/accounts/login/?next=/</a>
+                </div>
+
+                <div class="single-projects-txt">
+                    <h3>CMUD</h3>
+                    <img src="assets/images/projects/cmud.jpg" alt="CMUD" class="project-image">
+                    <p>Unlike a traditional MUD with a single application server, CMUD uses the globally distributed architecture shown in Figure 1. Players run the CMUD client app on their own
+                        machine, which connects to a nearby (low ping) backend storage server. The CMUD client
+                        is stateless, converting the player's inputs into queries against the backend storage server
+                        and printing out the results. Different backend storage servers “sync” with each other (i.e.,
+                        exchange data in the background) to maintain a single consistent global state, so that all
+                        users see the same virtual world, including each others' actions.
+                        The backend storage system itself implements a simple key-value store for string keys and
+                        values. Specifically, it supports operations to Get and Put key value
+                        pairs, plus an operation to List all key-value pairs starting with a given prefix. 
+                        The advantage of this architecture is that it simplifies app development and deployment:
+                        a cloud provider can run the same generic backend storage system for many apps, while
+                        individual app developers only need to code and deploy their app's client, not their own
+                        servers. This project is implemented using Go along with its RPCs and the MailBox system as the message queue.
+                    </p>
+                </div>
+
+                <div class="single-projects-txt">
+                    <h3>Raft</h3>
+                    <img src="assets/images/projects/raft.jpg" alt="Raft" class="project-image">
+                    <p>Raft is a consensus algorithm for managing a replicated
+                        log. It produces a result equivalent to (multi-)Paxos, and
+                        it is as efficient as Paxos, but its structure is different
+                        from Paxos; this makes Raft more understandable than
+                        Paxos and also provides a better foundation for building practical systems. In order to enhance understandability, Raft separates the key elements of consensus, such as
+                        leader election, log replication, and safety, and it enforces
+                        a stronger degree of coherency to reduce the number of
+                        states that must be considered. Results from a user study
+                        demonstrate that Raft is easier for students to learn than
+                        Paxos. Raft also includes a new mechanism for changing
+                        the cluster membership, which uses overlapping majorities to guarantee safety. 
+                        I replicated the system described in this paper using Go.
+                    </p>
+                    Demo and Paper: <a href="https://raft.github.io">https://raft.github.io</a>
+                </div>
+
+                <div class="single-projects-txt">
+                    <h3>Distributed Bitcoin Miner</h3>
+                    <img src="assets/images/projects/bitcoin.jpg" alt="Distributed Bitcoin Miner" class="project-image">
+                    <p>This project is implemented using Go and has 2 parts: LSP Protocol and 
+                        distributed bitcoin miner based on it. LSP is a networking protocol 
+                        supporting client/server model with message acknoledging, checksum 
+                        integrity checking, and reliability under bad network conditions. 
+                        Based on such protocol, working as a team, we implemented the 
+                        mining infruscture supporting brute force reverse hashing with a 
+                        task scheduler. With such implementation, we are able to reduce 
+                        a mining task requiring 28hrs to only 17min.
+                    </p>
+                </div>
+
+                <div class="single-projects-txt">
+                    <h3>Proxy Server</h3>
+                    <img src="assets/images/projects/proxy.jpg" alt="Proxy Server" class="project-image">
+                    <p>This project is implemented using C with a multi-threaded model. A proxy server is a computer program that acts as an intermediary between clients making requests to access
+                        resources and the servers that satisfy those requests by serving content. A web proxy is a special type of
+                        proxy server whose clients are typically web browsers and whose servers are web servers providing web
+                        content. When a web browser uses a proxy, it contacts the proxy instead of communicating directly with
+                        the web server; the proxy forwards the client’s request to the web server, reads the server’s response, then
+                        forwards the response to the client.
+                    </p>
+                </div>
+
+                <div class="single-projects-txt">
+                    <h3>Dynamic Memory Allocator</h3>
+                    <img src="assets/images/projects/malloc.jpg" alt="malloc" class="project-image">
+                    <p>I wrote dynamic memory allocator in C which consists of the malloc, free,
+                        realloc, and calloc functions. My version of optimization outperforms the 
+                        original version by increasing 50% performance and 90% utilization.
+                    </p>
+                </div>
+
+            </div>
+
+        </section>
+	
+
+
+		<!--footer-copyright start-->
+		<footer id="footer-copyright" class="footer-copyright">
+			<div class="container">
+				<div class="hm-footer-copyright text-center">
+					<p>
+						&copy; copyright Jiakun Wang. design and developed by Jiakun Wang
+					</p><!--/p-->
+				</div><!--/.text-center-->
+			</div><!--/.container-->
+
+			<div id="scroll-Top">
+				<div class="return-to-top">
+					<i class="fa fa-angle-up " id="scroll-top" ></i>
+				</div>
+				
+			</div><!--/.scroll-Top-->
+			
+        </footer><!--/.footer-copyright-->
+		<!--footer-copyright end-->
+		
+		<!-- Include all js compiled plugins (below), or include individual files as needed -->
+
+		<script src="assets/js/jquery.js"></script>
+        
+        <!--modernizr.min.js-->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
+		
+		<!--bootstrap.min.js-->
+        <script src="assets/js/bootstrap.min.js"></script>
+		
+		<!-- bootsnav js -->
+		<script src="assets/js/bootsnav.js"></script>
+		
+		<!-- jquery.sticky.js -->
+		<script src="assets/js/jquery.sticky.js"></script>
+		
+		<!-- for progress bar start-->
+
+		<!-- progressbar js -->
+		<script src="assets/js/progressbar.js"></script>
+
+		<!-- appear js -->
+		<script src="assets/js/jquery.appear.js"></script>
+
+		<!-- for progress bar end -->
+
+		<!--owl.carousel.js-->
+        <script src="assets/js/owl.carousel.min.js"></script>
+
+
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
+		
+        
+        <!--Custom JS-->
+        <script src="assets/js/custom.js"></script>
+        
+    </body>
+	
+</html>
