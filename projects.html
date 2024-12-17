@@ -105,12 +105,49 @@
 			</div>
                 <div class="projects-content">
                 <div class="single-projects-txt">
-                    <h3>Sigma Stock Markect Analyzor</h3>
-                    <img src="assets/images/projects/sigma-stock-analysis.jpg" alt="Sigma Stock Market Analyzer" class="project-image">
-                    <p>In this project, we made a Real-Time Stock Market Data. 
-                        We used Python as both producer and consumer, Kafka as a message queue 
-                        running on EC2 to process the data, S3 to store the processed data,
-                        Crawler and AWS Glue to create the data catalog, and Athena + SQL to query the data.
+                    <h3>USB</h3>
+                    <img src="assets/images/projects/usb.jpg" alt="usb" class="project-image">
+                    <p>In the USB project, I designed and simulated a simplified
+                         Serial Interface Engine (SIE) to interact with a thumb drive model, using SystemVerilog and 
+                         Synopsys VCS.
+                          The host performs READ and WRITE operations by coordinating multiple hardware FSMs: 
+                          a Read/Write FSM for initiating transactions, a Protocol Handler FSM for managing packet-level 
+                          operations (IN, OUT, DATA0, ACK, NAK) including retries, timeouts, and error handling, 
+                          and serial encoding FSMs for bit stuffing, NRZI encoding, and CRC checking. 
+                          The project involves layering FSMs to build a robust transaction protocol that handles 
+                          errors and corrupted data while adhering to simplified USB communication rules. 
+                          The testbench simulates an operating system, using predefined tasks (readData and writeData) 
+                          to initiate memory transfers and validate results. You must design inter-FSM protocols,
+                           tri-state drivers for D+ and D- lines, and implement layered Mealy machines for bitwise
+                            data transmission and error recovery.
+                    </p>
+                </div>
+                <div class="single-projects-txt">
+                    <h3>Needle Deep Learning Library</h3>
+                    <img src="assets/images/projects/needle.jpg" alt="needle" class="project-image">
+                    <p>The Needle framework is a custom deep learning library built from scratch,
+                        featuring a flexible NDArray backend that supports efficient computations 
+                        on both CPU and GPU. It includes an automatic differentiation engine for 
+                        gradient-based optimization, enabling forward and backward passes on tensors. 
+                        Needle provides essential neural network modules, such as linear layers, convolutions, RNNs, and LSTMs, 
+                        for tasks like image classification (CIFAR-10) and language modeling (Penn Treebank). 
+                        With its scalable training infrastructure, including data pipelines, optimizers, 
+                        and data augmentation tools, Needle serves as a lightweight yet powerful framework for modern deep learning
+                    </p>
+                </div>
+                <div class="single-projects-txt">
+                    <h3>Network On Chip</h3>
+                    <img src="assets/images/projects/noc.jpg" alt="NOC" class="project-image">
+                    <p>In this Network-on-Chip (NOC) project, I designed a simple communication system with two interconnected
+                        routers and six nodes. Nodes serve as endpoints for sending and receiving 32-bit data packets, 
+                        while routers handle packet routing using 8-bit transfers per clock cycle. The project is divided
+                        into two parts: designing a Node module that interfaces with testbenches and routers, including 
+                        buffering packets via a FIFO queue, and implementing a Router module that routes packets efficiently
+                        and fairly across its four ports while handling concurrent data transfers. Routers must reassemble 
+                        and transfer packets between nodes or other routers while adhering to handshaking protocols, 
+                        prioritizing fairness (e.g., round-robin scheduling) and avoiding packet loss. 
+                        The design emphasizes correctness, speed, and 
+                        fairness to ensure all packets reach their correct destinations without overflow or bottlenecks.
                     </p>
                 </div>
 
