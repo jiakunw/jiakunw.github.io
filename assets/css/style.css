@@ -932,12 +932,26 @@ span.single-timeline-horizontal.spacial-horizontal-line {width: 88px;}
     padding-right: 20%;
     padding-top: 30px;
 }
+.media-row {
+    display: flex;
+    align-items: center; /* 图片和视频垂直方向居中对齐 */
+    gap: 20px; /* 图片和视频之间留一点空隙 */
+    margin-bottom: 20px; /* 和下面的文字拉开点距离 */
+}
+.project-video {
+    width: 48%; /* 图片和视频各占一半宽度 */
+    height: auto;
+    object-fit: contain; /* 保持比例，不拉伸 */
+    max-width: 500px; /* 最多500px宽，避免太大 */
+    border-radius: 8px; /* 可选：让图片/视频圆润点，看着更高级 */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* 可选：加阴影，看着立体 */
+}
 .project-image {
     padding-top: 20px;
-    max-width: 500px; 
-    max-height: 300px; 
-    width: 100%;
-    height: auto; 
+    max-width: 500px;   /* 图片最多500px宽 */
+    width: 100%;        /* 在允许范围内自适应 */
+    height: auto;       /* 保持比例 */
+    object-fit: contain; /* 确保图片不会裁剪变形 */
 }
 .single-projects-add-info {
     margin: 35px 0;

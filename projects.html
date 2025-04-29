@@ -104,6 +104,50 @@
 				<h2>My Projects</h2>
 			</div>
                 <div class="projects-content">
+                    <div class="single-projects-txt">
+                        <h3>RISC-V</h3>
+                        <div class="media-row">
+                            <img src="assets/images/projects/risc-v.jpg" alt="risc-v" class="project-image">
+                    
+                            <img src="assets/images/projects/risc-v2.jpg" alt="risc-v2" class="project-image">
+                        </div>
+                        <p>As part of a semester-long project in computer architecture, I designed and implemented 
+                            a RISC-V RV32I processor from scratch, progressing from a single-cycle CPU to a fully pipelined 
+                            architecture with data forwarding, branch prediction, and cache integration. I developed a 5-stage pipelined 
+                            processor with a 2-bit hysteresis counter BTB for dynamic branch prediction, and integrated an 
+                            optimized data cache to overcome increased memory latency. To further enhance memory performance, 
+                            I designed and implemented a data cache prefetcher during the final stage of the course.
+
+                            Building upon this foundation, I am independently continuing the project to extend the processor 
+                            with a hardware multiplier, 2-way superscalar instruction issue, and a basic out-of-order (OOO) 
+                            execution engine with register renaming and dynamic scheduling. This work aims to further improve 
+                            instruction-level parallelism, maximize pipeline utilization, and explore realistic CPU microarchitectural 
+                            optimizations beyond a purely in-order design.
+                        </p>
+                    </div>
+                <div class="single-projects-txt">
+                    <h3>Real-Time Operating System on a Car</h3>
+                    <div class="media-row">
+                        <img src="assets/images/projects/car.jpg" alt="car" class="project-image">
+                
+                        <video controls class="project-video">
+                            <source src="assets/images/projects/car.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </div>
+                    <p>I designed and implemented a real-time operating system (RTOS) on an STM32 embedded platform 
+                        as part of an autonomous vehicle system. Over the semester, I built the system from the ground up, 
+                        including developing a bootloader, low-level device drivers (UART, GPIO, ADC, I2C), interrupt-driven 
+                        communication, and a custom syscall interface to support user-mode applications.
+
+                        Additionally, I implemented a lightweight real-time kernel featuring thread management, context switching, 
+                        fixed-priority rate monotonic scheduling (RMS), mutex-based synchronization with priority inheritance 
+                        (Highest Locker Protocol), and thread cancellation. In the final stage, I applied the RTOS to control 
+                        a DC motor using a PID controller, achieving precise speed regulation under real-time deadlines. 
+                        Additional threads handled UART communication and LCD display updates concurrently within the RTOS 
+                        scheduling framework.
+                    </p>
+                </div>
                 <div class="single-projects-txt">
                     <h3>USB</h3>
                     <img src="assets/images/projects/usb.jpg" alt="usb" class="project-image">
@@ -150,20 +194,6 @@
                         fairness to ensure all packets reach their correct destinations without overflow or bottlenecks.
                     </p>
                 </div>
-
-                <div class="single-projects-txt">
-                    <h3>RISC-240 CPU</h3>
-                    <img src="assets/images/projects/RISC-240.jpg" alt="RISC-240 CPU" class="project-image">
-                    <p>Working with a partner, we made a mini-RISC-V CPU using SystemVerilog. 
-                        We support 15 ALU instructions, 8 registers in a register file, and memory 
-                        read/write. To increase the efficiency of integer multiplication,
-                        we made a multiplication co-processor and re-wrote the assembly 
-                        file to manage memory more efficently. After adding the co-processor, we ran 
-                        our CPU on an FPGA with the help of Quartus to examine the result. We decreased 
-                        the average number of clock cycles requried from 500 to 75.
-                    </p>
-                </div>
-
                 <div class="single-projects-txt">
                     <h3>Digital Board</h3>
                     <img src="assets/images/projects/digital-board.jpg" alt="Digital Board" class="project-image">
