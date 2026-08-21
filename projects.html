@@ -105,6 +105,51 @@
 			</div>
                 <div class="projects-content">
                     <div class="single-projects-txt">
+                        <h3>TPU Tape Out TSMC65NM</h3>
+                        <div class="media-row">
+                            <img src="assets/images/projects/pnr.png" alt="pnr" class="project-image">
+                    
+                            <img src="assets/images/projects/rest.png" alt="rest" class="project-image">
+                        </div>
+                        <p>I designed and taped out an INT8 matrix-multiplication accelerator in TSMC 65 nm on a 1.11 × 1.31 mm die, built around an 8×8 output-stationary systolic array running at 40 MHz for a 5.12 GOPS peak throughput. I helped architect the chip-side host and test infrastructure—an SPI-driven MMIO register file, SRAM A/B/C/Bias bus slaves, FPGA AXI-SPI and AXI-bus bridges, and a firmware stack spanning HAL, application, and DFT layers—as well as a 176-bit scan chain and SRAM DFT methodology covering MATS+, March C-, checkerboard, walking 1/0, March RAW, and retention tests (63,496 operations / ~254K reads per SRAM, 100% pass rate). I verified the chip top against a testbench of 29 configuration and 9 corner cases, ran post-PnR simulations across typ/max/min corners in Synopsys VCS, and confirmed 100% RTL-to-post-PnR formal equivalence with JasperGold.
+                        </p>
+                    </div>
+                    <div class="single-projects-txt">
+                        <h3>Janus</h3>
+                        <div class="media-row">
+                            <img src="assets/images/projects/figure2.png" alt="arch" class="project-image">
+                        </div>
+                        <p>
+
+                            I implemented Stage 2 (operation-to-RTL), which wraps the target operation as a C reference and uses hw-cbmc bounded model checking to exhaustively prove the RTL module M matches it over the finite operand domain, and Stage 3 (RTL-to-ISA), which instantiates a per-instruction RVFI specification to prove the integrated pipeline decodes, routes operands, writes back, and advances the PC correctly—integration correctness that module-level checks cannot see. I also built the end-to-end evaluation: rebuilding the Ibex simulator, running cycle-accurate Verilator simulation, checking each workload's success sentinel, and measuring speedups. On failure, my stages return structured counterexamples (hw-cbmc traces, RVFI assertion failures) that drive the agent's repair loop. Across 13 embedded workloads, this flow accepted 7 single-cycle R/I-type custom instructions with end-to-end speedups of 2.56% to 13.65%, each backed by a machine-checkable proof of correctness rather than test-suite agreement.
+                            
+                            
+                        </p>
+                    </div>
+                    <div class="single-projects-txt">
+                        <h3>Transistor Based Microprocessor</h3>
+                        <div class="media-row">
+                            <img src="assets/images/projects/proce.png" alt="processor" class="project-image">
+                        </div>
+                        <p>We designed an 8-bit accumulator-based microcontroller core with a 6-bit instruction word and 3-bit opcode (NOP, LOAD, STORE, GET, PUT, ADD, SUB, SHIFT), implemented as a full custom layout in Cadence Virtuoso on TSMC 65 nm technology. 
+                            Each instruction executes in a single two-phase (φ1/φ2) clock cycle. The datapath—comprising an 8-byte memory, adder, shifter, 3-to-1 multiplexer, accumulator, and bus driver—was built in a bit-sliced style, with each 1-bit slice packaged as a self-contained, hierarchically instantiated cell. 
+                            To minimize area, we exploited the whitespace inside each shifter bit-cell (the shifter dominates the per-bit footprint) by embedding the local latch, MUX, and inverter directly adjacent to the shifter logic, yielding a compact, uniform horizontal pitch 
+                            that also improves device matching, parasitic predictability, and routing regularity. The latches were implemented as gated-feedback complementary 
+                            pass-gate structures placed upstream of the shifter to satisfy the φ1/φ2 timing requirements, and the instruction decoder was implemented as a separate PLA-style block 
+                            (with Espresso-minimized control equations) to keep combinational control logic isolated from the timing-critical datapath. Bus drivers were placed at the far right to align with the external bus interface 
+                            and shorten high-fanout wiring, with M1 vertical, M2 horizontal, and M3 reserved for power/ground distribution.
+
+                            The final layout is DRC- and LVS-clean, and full functional correctness was verified against a comprehensive vector file exercising all eight opcodes 
+                            using Spectre/Ultrasim simulations on the extracted netlist. All waveforms matched expected behavior at a 20 ns clock period. Critical-path analysis identified
+                             ADD as the limiting instruction at 20.89 ns (just above SUB at 20.816 ns), consistent with the adder's internal carry chain, and the adder 
+                             additionally generates an overflow output. Power was obtained by integrating the transient supply current, giving a total average current/power 
+                             of ≈952 µA / 952 µW at VDD = 1 V; as expected, NOP is the lowest-power instruction while the arithmetic operations (ADD/SUB) draw the most due to 
+                             full-datapath switching activity.
+                            
+                            
+                        </p>
+                    </div>
+                    <div class="single-projects-txt">
                         <h3>RISC-V</h3>
                         <div class="media-row">
                             <img src="assets/images/projects/risc-v.jpg" alt="risc-v" class="project-image">
@@ -117,12 +162,6 @@
                             processor with a 2-bit hysteresis counter BTB for dynamic branch prediction, and integrated an 
                             optimized data cache to overcome increased memory latency. To further enhance memory performance, 
                             I designed and implemented a data cache prefetcher during the final stage of the course.
-
-                            Building upon this foundation, I am independently continuing the project to extend the processor 
-                            with a hardware multiplier, 2-way superscalar instruction issue, and a basic out-of-order (OOO) 
-                            execution engine with register renaming and dynamic scheduling. This work aims to further improve 
-                            instruction-level parallelism, maximize pipeline utilization, and explore realistic CPU microarchitectural 
-                            optimizations beyond a purely in-order design.
                         </p>
                     </div>
                 <div class="single-projects-txt">
